@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="versionName"
+            type="java.lang.String"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.smec.appmanager.widget.TopBarLayout
+            android:id="@+id/topBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px126dp"
+            app:text_title="@string/about"
+            app:icon_left="@drawable/top_bar_left"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_marginTop="@dimen/px40dp"
+            android:layout_gravity="center"
+            android:id="@+id/profile_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/smec_logo" />
+
+
+        <TextView
+            android:layout_gravity="center"
+            android:textColor="@color/customBlack"
+            android:layout_marginTop="@dimen/px20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{@string/version+ versionName}'/>
+
+
+        <TextView
+            android:layout_gravity="center"
+            android:textColor="@color/customBlack"
+            android:layout_marginTop="@dimen/px20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/company_message"/>
+
+        <TextView
+            android:layout_gravity="center"
+            android:textColor="@color/customBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/company_message_english"/>
+
+        <TextView
+            android:layout_gravity="center"
+            android:textColor="@color/customBlack"
+            android:layout_marginTop="@dimen/px20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/copy_right"/>
+
+        <TextView
+            android:layout_gravity="center"
+            android:textColor="@color/customBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/copy_right_two"/>
+
+    </LinearLayout>
+
+</layout>

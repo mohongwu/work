@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="currentPage"
+            type="java.lang.Integer"/>
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.smec.appmanager.widget.TopBarLayout
+            android:id="@+id/topBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px126dp"
+            app:text_title="主页"/>
+
+       <RelativeLayout
+           android:background="#fafafa"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+
+           <RelativeLayout
+               android:layout_marginBottom="@dimen/px10dp"
+               android:background="#fafafa"
+               android:layout_above="@+id/smec_tab"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent">
+
+               <com.smec.appmanager.widget.CustomViewPager
+                   android:background="#fafafa"
+                   android:id="@+id/smec_pages"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent">
+
+               </com.smec.appmanager.widget.CustomViewPager>
+
+           </RelativeLayout>
+
+           <LinearLayout
+               android:elevation="10px"
+               android:background="@color/customWhite"
+               android:layout_alignParentBottom="true"
+               android:orientation="horizontal"
+               android:id="@+id/smec_tab"
+               android:layout_width="match_parent"
+               android:layout_height="@dimen/px120dp">
+
+               <LinearLayout
+                   android:gravity="center"
+                   android:orientation="horizontal"
+                   android:id="@+id/smec_home"
+                   android:onClick="tabSwitch"
+                   android:layout_width="0dp"
+                   android:layout_weight="1"
+                   android:layout_height="match_parent">
+
+                   <TextView
+                       android:textColor='@{currentPage == 0 ? @color/buttonBlue : @color/text_gray}'
+                       android:textSize="@dimen/font_size_16sp"
+                       android:text="主页"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content" />
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:onClick="tabSwitch"
+                   android:gravity="center"
+                   android:orientation="horizontal"
+                   android:id="@+id/smec_mine"
+                   android:layout_width="0dp"
+                   android:layout_weight="1"
+                   android:layout_height="match_parent">
+
+                   <TextView
+                       android:textColor='@{currentPage == 1 ? @color/buttonBlue : @color/text_gray}'
+                       android:textSize="@dimen/font_size_16sp"
+                       android:text="我的"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content" />
+
+               </LinearLayout>
+
+           </LinearLayout>
+
+       </RelativeLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data></data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@color/customWhite"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.smec.appmanager.widget.TopBarLayout
+            android:id="@+id/topBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px126dp"
+            app:text_title="所属用户组"
+            app:icon_left="@drawable/top_bar_left"/>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/px50dp"
+            android:paddingRight="@dimen/px30dp"
+            android:paddingLeft="@dimen/px30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:background="@drawable/details_content"
+                android:padding="@dimen/px20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <GridView
+                    android:background="#fafafa"
+                    android:numColumns="2"
+                    android:id="@+id/smec_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </GridView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>

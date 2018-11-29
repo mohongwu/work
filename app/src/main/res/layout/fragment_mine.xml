@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.smec.appmanager.module.mine.SmecMineViewModel"/>
+    </data>
+
+    <LinearLayout
+        android:background="@color/customWhite"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="#fafafa"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px300dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/smec_logo" />
+
+            <TextView
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/font_size_16sp"
+                android:layout_marginTop="@dimen/px20dp"
+                android:text='@{viewModel.smecSession.smecUser.userName + @string/hello}'
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:onClick="@{viewModel.mineOperator}"
+            android:id="@+id/smec_user_labels"
+            android:paddingTop="@dimen/px20dp"
+            android:paddingLeft="@dimen/px40dp"
+            android:paddingRight="@dimen/px30dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px80dp">
+
+            <TextView
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/font_size_18sp"
+                android:text="所属用户组"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="1dp"/>
+
+            <ImageView
+                android:layout_marginTop="@dimen/px10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/smec_turn_right"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_marginLeft="@dimen/px40dp"
+            android:layout_marginTop="@dimen/px20dp"
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="@color/bg_gray"/>
+
+        <LinearLayout
+            android:onClick="@{viewModel.mineOperator}"
+            android:id="@+id/smec_update_password"
+            android:paddingTop="@dimen/px20dp"
+            android:paddingLeft="@dimen/px40dp"
+            android:paddingRight="@dimen/px30dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px80dp">
+
+            <TextView
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/font_size_18sp"
+                android:text="修改密码"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="1dp"/>
+
+            <ImageView
+                android:layout_marginTop="@dimen/px10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/smec_turn_right"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_marginLeft="@dimen/px40dp"
+            android:layout_marginTop="@dimen/px20dp"
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="@color/bg_gray"/>
+
+        <LinearLayout
+            android:onClick="@{viewModel.mineOperator}"
+            android:id="@+id/smec_about"
+            android:paddingTop="@dimen/px20dp"
+            android:paddingLeft="@dimen/px40dp"
+            android:paddingRight="@dimen/px30dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px80dp">
+
+            <TextView
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/font_size_18sp"
+                android:text="关于"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="1dp"/>
+
+            <ImageView
+                android:layout_marginTop="@dimen/px10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/smec_turn_right"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_marginLeft="@dimen/px40dp"
+            android:layout_marginTop="@dimen/px20dp"
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="@color/bg_gray"/>
+
+        <LinearLayout
+            android:onClick="@{viewModel.mineOperator}"
+            android:id="@+id/smec_set"
+            android:paddingTop="@dimen/px20dp"
+            android:paddingLeft="@dimen/px40dp"
+            android:paddingRight="@dimen/px30dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px80dp">
+
+            <TextView
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/font_size_18sp"
+                android:text="设置"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="1dp"/>
+
+            <ImageView
+                android:layout_marginTop="@dimen/px10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/smec_turn_right"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_marginLeft="@dimen/px40dp"
+            android:layout_marginTop="@dimen/px20dp"
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="@color/bg_gray"/>
+
+        <LinearLayout
+            android:onClick="@{viewModel.mineOperator}"
+            android:id="@+id/smec_logout"
+            android:paddingTop="@dimen/px20dp"
+            android:paddingLeft="@dimen/px40dp"
+            android:paddingRight="@dimen/px30dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px80dp">
+
+            <TextView
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/font_size_18sp"
+                android:text="退出登录"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="1dp"/>
+
+            <ImageView
+                android:layout_marginTop="@dimen/px10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/smec_turn_right"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_marginLeft="@dimen/px40dp"
+            android:layout_marginTop="@dimen/px20dp"
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="@color/bg_gray"/>
+
+    </LinearLayout>
+
+</layout>

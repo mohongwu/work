@@ -1,0 +1,118 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.chenenyu.router'
+apply plugin: 'realm-android'
+
+def domain = 'http://10.1.11.40:7777/'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion '28.0.2'
+    defaultConfig {
+        applicationId "com.smec.appmanager"
+        minSdkVersion 16
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        flavorDimensions "versionCode"
+    }
+
+    productFlavors {
+
+        smec_release {
+            domain = 'http://10.1.11.40:7777/'
+        }
+    }
+
+    // apk name def
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = defaultConfig.applicationId + "-" + buildType.name + "-v" +
+                    defaultConfig.versionName + "-" + defaultConfig.versionCode + ".apk";
+        }
+    }
+
+    //添加签名配置
+    signingConfigs{
+
+        //正式包
+        release {
+            keyAlias 'smec'
+            keyPassword 'smec3030'
+            storeFile file('../appManager.jks')
+            storePassword 'smec3030'
+        }
+
+        //测试包
+        debug {
+        }
+    }
+
+    buildTypes {
+        release {
+            manifestPlaceholders = [
+                    app_name:"应用管理平台"
+            ]
+            buildConfigField("String","SMEC_DOMAIN",'"'+domain+'"')
+            zipAlignEnabled true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+
+        debug{
+            manifestPlaceholders = [
+                    app_name:"应用管理平台"
+            ]
+            buildConfigField("String","SMEC_DOMAIN",'"'+domain+'"')
+            signingConfig signingConfigs.release
+        }
+    }
+
+
+    dataBinding {
+        enabled true
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    testImplementation 'junit:junit:4.12'
+    api 'com.trello:rxlifecycle:0.3.1'
+    api 'com.trello:rxlifecycle-components:0.3.1'
+    api 'io.reactivex:rxandroid:1.2.1'
+    api 'com.jakewharton.rxbinding:rxbinding:0.4.0'
+    api 'com.squareup.retrofit2:retrofit:2.1.0'
+    api 'com.squareup.retrofit2:converter-gson:2.1.0'
+    api 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    api 'com.tbruyelle.rxpermissions:rxpermissions:0.8.2@aar'
+    api 'com.squareup.okhttp3:okhttp:3.4.1'
+    api 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    api 'com.jakewharton.timber:timber:4.3.1'
+    api 'jp.wasabeef:recyclerview-animators:2.2.5', {
+        exclude group: 'com.android.support'
+    }
+    api 'com.kaopiz:kprogresshud:1.1.0'
+    api 'com.lcodecorex:tkrefreshlayout:1.0.7'
+    api 'com.flyco.dialog:FlycoDialog_Lib:1.2.6'
+    api 'de.hdodenhof:circleimageview:2.2.0'
+
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+    implementation 'com.github.bumptech.glide:okhttp3-integration:4.8.0'
+
+}

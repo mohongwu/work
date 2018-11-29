@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.smec.appmanager.module.main.ampdetails.SmecAmpDetailsViewModel"/>
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@color/customWhite"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.smec.appmanager.widget.TopBarLayout
+            android:id="@+id/topBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px126dp"
+            app:text_title="@string/application_details"
+            app:icon_left="@drawable/top_bar_left"/>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/px20dp"
+            android:id="@+id/smec_apk_item"
+            android:orientation="horizontal"
+            android:layout_marginRight="@dimen/px30dp"
+            android:layout_marginLeft="@dimen/px30dp"
+            android:padding="@dimen/px26dp"
+            android:layout_marginBottom="@dimen/px20dp"
+            android:background="@drawable/shape_apk_item"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px180dp">
+
+            <ImageView
+                android:id="@+id/smec_icon"
+                android:layout_width="@dimen/px128dp"
+                android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/px30dp"
+                android:layout_weight="2.5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:singleLine="true"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/font_size_16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{viewModel.allApkDto.ampApk.name}"/>
+
+                <TextView
+                    android:layout_marginTop="@dimen/px4dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/font_size_14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{viewModel.allApkDto.ampApk.versionName}"/>
+
+                <TextView
+                    android:layout_marginTop="@dimen/px4dp"
+                    android:textSize="@dimen/font_size_14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text='@{@string/application_manager + viewModel.allApkDto.ampApk.manager}'/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/px20dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor='@color/buttonBlue'
+                android:paddingTop="@dimen/px8dp"
+                android:paddingBottom="@dimen/px8dp"
+                android:background="@drawable/details_switch_one"
+                android:gravity="center"
+                android:textSize="@dimen/font_size_16sp"
+                android:text="简介"
+                android:id="@+id/smec_introduce"
+                android:layout_width="@dimen/px240dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/divider"
+                android:layout_marginRight="@dimen/px30dp"
+                android:layout_marginLeft="@dimen/px30dp"
+                android:layout_width="match_parent"
+                android:layout_height="3px"
+                android:background="@color/bg_gray"
+                android:layout_above="@+id/smec_apk_op"/>
+
+            <LinearLayout
+                android:paddingLeft="@dimen/px120dp"
+                android:paddingRight="@dimen/px120dp"
+                android:orientation="horizontal"
+                android:id="@+id/smec_apk_op"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px100dp">
+
+                <com.smec.appmanager.widget.ProgressButton
+                    android:id="@+id/smec_operator"
+                    app:backgroundBtn="@color/top_bar"
+                    app:foreground="@color/green"
+                    app:textcolor="@color/customWhite"
+                    app:textBtn="安装"
+                    app:textSizeBtn="@dimen/font_size_14sp"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px66dp" />
+
+            </LinearLayout>
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/divider">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:background="@color/customWhite"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/px30dp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_marginLeft="@dimen/px30dp"
+                            android:text="更新内容:"
+                            android:textColor="@color/text_black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/font_size_16sp" />
+
+                        <LinearLayout
+                            android:layout_marginTop="@dimen/px30dp"
+                            android:paddingRight="@dimen/px80dp"
+                            android:paddingLeft="@dimen/px80dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:padding="@dimen/px20dp"
+                                android:background="@drawable/details_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/smec_content"
+                                android:layout_width="match_parent"
+                                android:minHeight="@dimen/px180dp"/>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_marginRight="@dimen/px30dp"
+                            android:layout_marginLeft="@dimen/px30dp"
+                            android:layout_marginTop="@dimen/px30dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="3px"
+                            android:background="@color/bg_gray"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/px40dp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_marginLeft="@dimen/px30dp"
+                            android:text="应用所属角色分组:"
+                            android:textColor="@color/text_black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/font_size_16sp" />
+
+                        <LinearLayout
+                            android:layout_marginTop="@dimen/px30dp"
+                            android:paddingRight="@dimen/px80dp"
+                            android:paddingLeft="@dimen/px80dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:background="@drawable/details_content"
+                                android:padding="@dimen/px20dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <GridView
+                                    android:background="#fafafa"
+                                    android:numColumns="2"
+                                    android:id="@+id/smec_label"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/px200dp">
+
+                                </GridView>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_marginRight="@dimen/px30dp"
+                            android:layout_marginLeft="@dimen/px30dp"
+                            android:layout_marginTop="@dimen/px30dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="3px"
+                            android:background="@color/bg_gray"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/px40dp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_marginLeft="@dimen/px30dp"
+                            android:text="注意事项:"
+                            android:textColor="@color/text_black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/font_size_16sp" />
+
+                        <LinearLayout
+                            android:layout_marginTop="@dimen/px20dp"
+                            android:paddingRight="@dimen/px80dp"
+                            android:paddingLeft="@dimen/px80dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="应用无法下载更新,请联系应用负责人"/>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </ScrollView>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</layout>

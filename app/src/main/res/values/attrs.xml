@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- topBar -->
+    <declare-styleable name="TopBarLayout">
+        <attr name="text_left" format="string"></attr>
+        <attr name="text_title_header" format="string"></attr>
+        <attr name="text_title" format="string"></attr>
+        <attr name="text_right_first" format="string"></attr>
+        <attr name="text_right_second" format="string"></attr>
+        <attr name="icon_left" format="reference"></attr>
+        <attr name="icon_right_first" format="reference"></attr>
+        <attr name="icon_right_second" format="reference"></attr>
+    </declare-styleable>
+
+    <declare-styleable name="Theme">
+        <attr name="ShapedImageView" format="reference" />
+    </declare-styleable>
+    <!-- 自定义圆角ImageView -->
+    <declare-styleable name="ShapedImageView">
+        <attr name="circle" format="boolean" />
+        <attr name="round_radius" format="dimension" />
+        <attr name="stroke_width" format="dimension" />
+        <attr name="shape_mode" format="integer" />
+        <attr name="stroke_color" format="color" />
+    </declare-styleable>
+
+
+    <declare-styleable name="SkipEditText">
+        <attr name="leftRes" format="integer" />
+        <attr name="rightRes" format="integer" />
+        <attr name="topRes" format="integer" />
+        <attr name="bottomRes" format="integer" />
+        <attr name="showSkipBar" format="boolean" />
+        <attr name="digits" format="integer" />
+    </declare-styleable>
+
+    <!-- SignImageButton -->
+    <declare-styleable name="SignImageButton">
+        <attr name="text" format="string" />
+        <attr name="text_color" format="color" />
+        <attr name="text_size" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="SwitchButton">
+        <attr name="onDrawable" format="reference" />
+        <attr name="offDrawable" format="reference" />
+        <attr name="thumbDrawable" format="reference" />
+        <attr name="thumb_margin" format="dimension|reference" />
+        <attr name="thumb_marginTop" format="dimension|reference" />
+        <attr name="thumb_marginBottom" format="dimension|reference" />
+        <attr name="thumb_marginLeft" format="dimension|reference" />
+        <attr name="thumb_marginRight" format="dimension|reference" />
+        <attr name="thumb_width" format="dimension|reference" />
+        <attr name="thumb_height" format="dimension|reference" />
+        <attr name="onColor" format="color|reference" />
+        <attr name="offColor" format="color|reference" />
+        <attr name="thumbColor" format="color|reference" />
+        <attr name="thumbPressedColor" format="color|reference" />
+        <attr name="animationVelocity" format="integer" />
+        <attr name="radius" format="integer" />
+        <attr name="measureFactor" format="float" />
+        <attr name="insetLeft" format="dimension|reference" />
+        <attr name="insetRight" format="dimension|reference" />
+        <attr name="insetTop" format="dimension|reference" />
+        <attr name="insetBottom" format="dimension|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="ProgressButton">
+        　　<attr name="backgroundBtn" format="color|reference" />
+        　　<attr name="foreground" format="color" />
+        　　<attr name="textcolor" format="color" />
+        　　<attr name="maxBtn" format="integer"/>
+        　　<attr name="progressBtn" format="integer"/>
+        　　<attr name="textSizeBtn" format="dimension"/>
+        　　<attr name="textBtn" format="string" />
+    </declare-styleable>
+
+</resources>

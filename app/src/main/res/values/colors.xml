@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="customLightGray">#EDF2F6</color>
+    <color name="customLightSplitGray">#E0E7ED</color>
+    <color name="customLightLineGray">#DDE6F7</color>
+    <color name="customGray">#687D90</color>
+    <color name="customBlack">#14344B</color>
+    <color name="customBlue">#2647C6</color>
+    <color name="customExplainBlue">#55ACEE</color>
+    <color name="customOrange">#FE8649</color>
+    <color name="customWhite">#FFFFFF</color>
+    <color name="customTextColor">#13334d</color>
+    <color name="customLightYellowColor">#FAFFBD</color>
+    <color name="customBgGray">#666666</color>
+    <color name="customGreen">#76c666</color>
+    <color name="customTanslate">#00000000</color>
+
+
+    <color name="bg_gray">#EDF2F6</color>
+    <color name="bg_blue">#A1B9E7</color>
+    <color name="order_color">#57ABF1</color>
+    <color name="projects_change">#DDE5F7</color>
+    <color name="details_font_gray">#6A7C90</color>
+    <color name="date_font_color">#FE8649</color>
+    <color name="submit_selected">#EF642E</color>
+    <color name="ele_back_bg">#FFF7F8</color>
+    <color name="green">#54C45A</color>
+    <color name="addChangeSelected">#32A532</color>
+    <color name="buttonBlue">#547FD5</color>
+    <color name="accessDebug">#417AD6</color>
+    <color name="space">#EDF1F6</color>
+    <color name="deleteRed">#FF0000</color>
+    <color name="readonly">#DEDEDE</color>
+    <color name="datePickerDialog">#3360D1</color>
+    <color name="clearColor">#00000000</color>
+    <color name="reportChartOne">#F66236</color>
+    <color name="reportChartTwo">#2EA337</color>
+    <color name="reportChartThree">#4854B5</color>
+    <color name="reportChartFour">#4566FE</color>
+    <color name="reportChartFif">#F7474D</color>
+    <color name="PaleGodenrod">#EEE8AA</color>
+    <color name="CadetBlue">#237777</color>
+    <color name="LightSeaGreen">#20B2AA</color>
+
+
+    <color name="smec_gray">#EFEFEF</color>
+    <color name="text_gray">#818181</color>
+    <color name="top_bar">#1980E5</color>
+    <color name="main_un_click">#DDDDDD</color>
+    <color name="waring">#FF9A00</color>
+    <color name="already_solve">#00B535</color>
+
+    <color name="login_back">#F7F7F7</color>
+    <color name="login_font">#B2B5B9</color>
+    <color name="login_font_version">#73818E</color>
+    <color name="login_border">#DBDEDC</color>
+
+    <color name="real_round">#58636A</color>
+    <color name="main_font_color">#546775</color>
+    <color name="main_tab">#FFFFFF</color>
+    <color name="real_time_line">#ECEEEF</color>
+    <color name="backgroundGray">#99000000</color>
+
+    <color name="monthForm_backgroundGray">#D8D9DA</color>
+    <color name="monthForm_line">#D8D9DA</color>
+    <color name="monthForm_green">#63a132</color>
+    <color name="monthForm_line_background">#F0F2F5</color>
+    <color name="monthForm_head_background">#ffffff</color>
+    <color name="monthForm_popWindow_background">#F2F3F4</color>
+    <color name="monthForm_popWindow_text">#C6C7C8</color>
+    <color name="monthForm_item_number">#f80000</color>
+    <color name="monthForm_popWindow_number">#DF4832</color>
+    <color name="monthForm_fault_log">#9928353d</color>
+    <color name="monthForm_text">#000000</color>
+    <color name="monthForm_title">#58636A</color>
+    <color name="monthForm_line_grey">#F6F5FA</color>
+    <color name="nav_back">#282B32</color>
+    <color name="nav_line">#4A4B46</color>
+
+    <color name="smec_back">#ECEDEE</color>
+
+    <color name="smec_text">#46525D</color>
+    <color name="smec_real_back">#263A48</color>
+    <color name="login_line">#535358</color>
+    <color name="navi_font">#7B8591</color>
+    <color name="smec_toast">#88000000</color>
+    <color name="smec_gray_bottom">#55333333</color>
+    <color name="smec_null_data">#77ffffff</color>
+    <color name="item_back">#EBECED</color>
+    <color name="item_line">#213F42</color>
+    <color name="smec_email">#EE7484</color>
+
+    <color name="site_detail_bg">#D8D9DA</color>
+
+    <color name="text_black">#141414</color>
+    <color name="text_red">#CF4531</color>
+
+    <color name="calendar_select">#991980E5</color>
+
+    <color name="line_report_bg">#efeff2</color>
+    <color name="line_report_title">#fd987e</color>
+    <color name="line_report_text">#58626b</color>
+    <color name="line_report_line">#bcb1af</color>
+
+    <color name="line_report_green">#6cd68d</color>
+    <color name="line_report_red">#ff815b</color>
+    <color name="line_report_gray">#b0b0b0</color>
+    <color name="select_page">#649ce5</color>
+</resources>
